@@ -12,9 +12,7 @@
 // gli elementi della lista individualmente.
 //Svolgete questo esercizio in 2 versioni: col ciclo for e col ciclo while.
 
-
 //START 
-
 const list = [
     'latte', 
     'pomodori',
@@ -25,15 +23,24 @@ const list = [
     'piatti pronti',
 ]
 
-// Creo variabile con l'indice 'i' a 0 e ad ogni iterazione, 
-//se 'i' è minore della lunghezza dell'array 'list',
-// esegue console log, 
-// incremento 'i' di 1,
-// e procede con la successiva iterazione.
+//Creo costante per selezionare ul nel dom.
+const listContainer = document.querySelector('.list-items');
+console.log(listContainer)
 
-// Il ciclo termina quando indice diventa uguale o superiore alla 
+// Creo variabile con l'indice 'i' a 0 e ad ogni iterazione, 
+// se 'i' è minore della lunghezza dell'array 'list',
+// esegue console log, 
+// incremento 'i' di 1 e procede con la successiva iterazione.
+// Il ciclo termina quando 'i' diventa uguale o superiore alla 
 //lunghezza della list.
 for (let i = 0; i < list.length; i++) {
-    console.log(list[i]);
+    const item = list[i];
+    
+    // Aggiungi un nuovo elemento <li> al contenuto di listContainer,
+    //e concateno i valori della variabile item in un tag <li>
+    listContainer.innerHTML += `<li>${item}</li>`;
+   
 }
+
+
 
